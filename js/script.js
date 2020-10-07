@@ -139,9 +139,26 @@ for(var i = 0; i < nizBrojeva.length/2; i++){
         }
 }
 
+//pronalazak najveceg decimalnog broja u nizu
+var niz_decimalnih = [0.1, 0.001, 0.02, 0.003];
+var najveci = niz_decimalnih[0];
+
+for(var i in niz_decimalnih){
+    if(niz_decimalnih[i] > najveci){
+        najveci = niz_decimalnih[i];
+    }
+}
+
+console.log("Najveci element u nizu je: " + najveci);
 
 
+//pronalazak najveceh decimalnog broja u nizu
+var najmanji = niz_decimalnih[0];
 
+for(var i in niz_decimalnih){
+    if(niz_decimalnih[i] < najmanji){
+        najmanji = niz_decimalnih[i];
+    }
+}
 
-
-
+console.log("Najmanji element u nizu je: " + najmanji;
