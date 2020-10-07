@@ -140,7 +140,7 @@ for(var i = 0; i < nizBrojeva.length/2; i++){
 }
 
 //pronalazak najveceg decimalnog broja u nizu
-var niz_decimalnih = [0.1, 0.001, 0.02, 0.003];
+var niz_decimalnih = [0.1, 0.02, 0.003, 0.001];
 var najveci = niz_decimalnih[0];
 
 for(var i in niz_decimalnih){
@@ -161,4 +161,143 @@ for(var i in niz_decimalnih){
     }
 }
 
-console.log("Najmanji element u nizu je: " + najmanji;
+console.log("Najmanji element u nizu je: " + najmanji);
+
+//odredjivanje broja nula u redu niza
+var m = [ [1,2,0,3],
+            [0,2,0,3],
+            [3,4,5,7],
+            [5,0,0,9]];
+
+var brojac = 0;
+
+for(var i = 0; i < m.length;i++){
+    for(var j = 0; j < m[0].length; j++){
+        if(m[i][j] === 0){
+            brojac++;
+        }
+    }
+    console.log("Broj nula u redu " + i + " je " + brojac);
+    brojac = 0;
+}
+
+//odredjivanje najveceg broja na glavnoj dijagonali niza
+var najveci = m[0][0];
+
+for(var i = 0; i < m.length;i++){
+    for(var j = 0; j < m[i].length; j++){
+        if(i === j){
+            if(m[i][j] > najveci){
+                najveci = m[i][j];
+            }
+        }
+    }
+}
+
+console.log("Najveci broj na glavnoj dijagonali niza je: " + najveci);
+
+//kreiranje matrice
+var matrica = [];
+var kol = 3;
+var vrsta = 3;
+
+for(var i = 0; i < vrsta; i++){
+    matrica[i] = [];
+    for(var j = 0; j < kol; j++){
+        matrica[i][j] = j+1;
+    }
+}
+console.log(matrica);
+
+//spajanje dva niza
+var vocke1 = ["banana", "kruska", "jabuka"];
+var vocke2 = ["tresnja", "sljiva", "jagoda"];
+var sveVocke = vocke1.slice();
+
+for(var i = 0; i < vocke2.length; i++){
+    sveVocke.push(vocke2[i]);
+}
+
+console.log(vocke1);
+
+//spajanje niza bez duplikata
+var vocke1 = ["banana", "kruska", "jabuka", "sljiva"];
+var vocke2 = ["tresnja", "sljiva", "jagoda", "kupina", "malina"];
+var sveVocke = vocke1.slice();
+
+for(var i in vocke2){
+    if(!sveVocke.includes(vocke2[i])){
+        sveVocke.push(vocke2[i]);
+    }
+}
+
+//kreiranje dva niza, benzin i dizel 
+//i dodavanje elemenata na osnovu drugih vrednosti
+
+var automobili = [ ["mercedes", "b"], ["opel", "d"], 
+["toyota", "d"], ["bmw", "b"], ["volvo", "d"]];
+var dizel = [];
+var benzin = [];
+
+for (var i in automobili){
+    if(automobili[i][1] == 'b'){
+        benzin.push(automobili[i][0]);
+    } else{
+        dizel.push(automobili[i][0]);
+    }
+}
+
+// Dat je spisak zaposlenih i njihove godine u sledecem obliku:
+var zaposleni = [
+    ["pera", "jova", "marko"],
+    [28,      31,     19]
+  ];
+
+  // Ispisati svakog zaposlenog i koliko svaki zaposleni ima godina
+  for(var i in zaposleni){
+      console.log("Zaposleni: " + zaposleni[0][i] + ", godine: " + zaposleni[1][i]);
+  }
+
+  // U spisku zaposlenih naci koliko jova ima godina
+  for(var i in zaposleni){
+      if(zaposleni[0][i] == 'jova'){
+          console.log("Jova ima " + zaposleni[1][i]);
+      }
+  }
+
+  // Naci srednju vrednost godina zaposlenih
+  var zbir = 0;
+  var srVrednost = 0;
+  for(var i in zaposleni[1]){
+    zbir += zaposleni[1][i];
+  }
+  console.log(zbir);
+  srVrednost = zbir/zaposleni[1].length;
+
+//izracunati i podesiti plate ostalih zaposlenih tako da:
+// tehnicar ima 70% plate inzenjera
+// doktor ima platu tehnicara + pola plate inzenjera
+var zaposleni = [
+    ["pera",      "jova",     "marko"],
+    [28,          31,         39],
+    ["inzenjer",  "tehnicar", "doktor"],
+    [700,         0,        0]
+  ];
+
+var plataInzenjera = 0;
+for(var i = 0; i < zaposleni[2].length; i++){
+    if(zaposleni[2][i] == 'inzenjer'){
+        plataInzenjera = zaposleni[3][i];
+    }
+}
+
+var plataTehnicara = plataInzenjera *0.7;
+var plataDoktora = plataTehnicara + plataInzenjera/2;
+for(var i = 0; i < zaposleni[2].length; i++){
+    if(zaposleni[2][i] == 'tehnicar'){
+        zaposleni[2][i] = plataTehnicara;
+    }
+    if(zaposleni[2][i] == 'doktor'){
+        zaposleni[2][i] = plataDoktora;
+    }
+}
