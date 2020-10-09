@@ -1,57 +1,17 @@
-var vreme = 10;
-
-if(vreme < 10){
-    console.log('Dobro jutro!');
-} else if(vreme > 12 && vreme < 16) {
-    console.log("Vreme je za caj!");
-}
-else{
-    console.log("Dobar dan!");
-}
-
-var dan = 5;
-
-switch(dan){
-    case 5:
-        console.log("petak");
-        break;
-    case 6:
-        console.log("subota");
-        break;
-    case 0:
-        console.log("nedelja");
-        break;
-    default:
-        console.log("radni dan");
-}
-
-for(var i = 0; i < 10; i++){
-    console.log("i je " + i);
-}
-
-for(let i = 1; i < 20; i++){
-    if(i == 5){
-        continue;
-    }
-    if(i == 16){
-        break;
-    }
-}
-
 var x = 3;
 var y= -4;
 var z = x-y;
 
 if((x+y) > 0){
-    console.log("Zbir prve dve je pozitivan broj");
+   // console.log("Zbir prve dve je pozitivan broj");
 } else{
-    console.log("Zbir prve dve je negativan broj");
+   // console.log("Zbir prve dve je negativan broj");
 }
 
 if((x+z) > 15 && y < 0){
-    console.log("Proizvod prve i trece je veci od 15 i druga varijable je negativna");
+  //  console.log("Proizvod prve i trece je veci od 15 i druga varijable je negativna");
 } else if((x+z) > 15 || y > 0){
-    console.log("Proizvod prve i trece je broj veci od 15 ili je druga varijabla pozitivna");
+   // console.log("Proizvod prve i trece je broj veci od 15 ili je druga varijabla pozitivna");
 }
 
 
@@ -62,14 +22,14 @@ switch(x){
     case 3:
     case 4:
     case 5:
-        console.log("Zadata vrednost je izmedju 1 i 5 i zadata vrednost je " + x);
+       // console.log("Zadata vrednost je izmedju 1 i 5 i zadata vrednost je " + x);
         break;
     case 8:
     case 9:
     case 10:
-        console.log("Zadata vrednost je izmedju 8 i 10");
+       // console.log("Zadata vrednost je izmedju 8 i 10");
     default:
-        console.log("Zadata vrednost nije u navedenom opsegu");
+       // console.log("Zadata vrednost nije u navedenom opsegu");
 }
 
 
@@ -77,13 +37,13 @@ x=-7;
 y=1;
 while(x+y < 0){
    y++;
-   console.log(x+y);
+  // console.log(x+y);
 }
 
 //ispis brojva deljivih sa 2
 for(var i = 0; i < 11; i++){
     if(i%2==0){
-        console.log(i);
+       // console.log(i);
     }
 }
 
@@ -92,7 +52,7 @@ for(var i = 0; i < 11; i++){
 var niz = ["saab", "volvo", "mercedes"];
 
 for(let i = 0; i < niz.length; i++){
-    console.log(niz[i]);
+    //console.log(niz[i]);
 }
 
 //provera da li se u nizu nalazi red 'volvo'
@@ -100,13 +60,13 @@ for(let i = 0; i < niz.length; i++){
     if(niz[i] == 'volvo'){
        break;
     }
-    console.log(niz[i]);
+    //console.log(niz[i]);
 }
 
 //ispis brojeva deljivih sa 3
 for(var i = 0; i <= 20; i++){
     if(i%3==0){
-        console.log(i);
+        //console.log(i);
     }
 }
 
@@ -119,12 +79,12 @@ for(var i = 0; i < nizBrojeva.length; i++){
     zbir+=nizBrojeva[i];
 }
 srednjaVr = zbir/nizBrojeva.length;
-console.log(srednjaVr);
+
 
 //provera da li niz sadrzi broj 5
 for(var i = 0; i < nizBrojeva.length; i++){
     if(nizBrojeva[i] == 5){
-        console.log("Niz sadrzi broj 5");
+        //console.log("Niz sadrzi broj 5");
     }
 }
 
@@ -132,10 +92,10 @@ for(var i = 0; i < nizBrojeva.length; i++){
 //provera simetricnosti niza
 for(var i = 0; i < nizBrojeva.length/2; i++){
         if(nizBrojeva[i] != nizBrojeva[nizBrojeva.length - i - 1]){
-            console.log("Niz nije simetrican");
+            //console.log("Niz nije simetrican");
             break;
         } else{
-            console.log("Niz je simetrican");
+           //console.log("Niz je simetrican");
         }
 }
 
@@ -149,7 +109,7 @@ for(var i in niz_decimalnih){
     }
 }
 
-console.log("Najveci element u nizu je: " + najveci);
+//console.log("Najveci element u nizu je: " + najveci);
 
 
 //pronalazak najveceh decimalnog broja u nizu
@@ -161,7 +121,7 @@ for(var i in niz_decimalnih){
     }
 }
 
-console.log("Najmanji element u nizu je: " + najmanji);
+//console.log("Najmanji element u nizu je: " + najmanji);
 
 //odredjivanje broja nula u redu niza
 var m = [ [1,2,0,3],
@@ -177,7 +137,7 @@ for(var i = 0; i < m.length;i++){
             brojac++;
         }
     }
-    console.log("Broj nula u redu " + i + " je " + brojac);
+    //console.log("Broj nula u redu " + i + " je " + brojac);
     brojac = 0;
 }
 
@@ -194,7 +154,7 @@ for(var i = 0; i < m.length;i++){
     }
 }
 
-console.log("Najveci broj na glavnoj dijagonali niza je: " + najveci);
+//console.log("Najveci broj na glavnoj dijagonali niza je: " + najveci);
 
 //kreiranje matrice
 var matrica = [];
@@ -207,7 +167,7 @@ for(var i = 0; i < vrsta; i++){
         matrica[i][j] = j+1;
     }
 }
-console.log(matrica);
+
 
 //spajanje dva niza
 var vocke1 = ["banana", "kruska", "jabuka"];
@@ -218,7 +178,7 @@ for(var i = 0; i < vocke2.length; i++){
     sveVocke.push(vocke2[i]);
 }
 
-console.log(vocke1);
+
 
 //spajanje niza bez duplikata
 var vocke1 = ["banana", "kruska", "jabuka", "sljiva"];
@@ -255,13 +215,13 @@ var zaposleni = [
 
   // Ispisati svakog zaposlenog i koliko svaki zaposleni ima godina
   for(var i in zaposleni){
-      console.log("Zaposleni: " + zaposleni[0][i] + ", godine: " + zaposleni[1][i]);
+      //console.log("Zaposleni: " + zaposleni[0][i] + ", godine: " + zaposleni[1][i]);
   }
 
   // U spisku zaposlenih naci koliko jova ima godina
   for(var i in zaposleni){
       if(zaposleni[0][i] == 'jova'){
-          console.log("Jova ima " + zaposleni[1][i]);
+          //console.log("Jova ima " + zaposleni[1][i]);
       }
   }
 
@@ -271,7 +231,7 @@ var zaposleni = [
   for(var i in zaposleni[1]){
     zbir += zaposleni[1][i];
   }
-  console.log(zbir);
+
   srVrednost = zbir/zaposleni[1].length;
 
 //izracunati i podesiti plate ostalih zaposlenih tako da:
@@ -327,4 +287,99 @@ function ispisiKorisnike(korisnici){
     }
 }
 
-ispisiKorisnike(korisnici);
+//Zadatak 2
+/*Napisati funkciju koja za dva unesena stringa formira 
+i ispisuje novi string koji se sastoji od dva puta ponovljena 
+prva tri karaktera iz prvog stringa i poslednja tri karaktera drugog stringa.
+*/
+function noviString(stringPrvi, stringDrugi){
+    var prvi = stringPrvi.substring(0,3);
+    var drugi = stringDrugi.substring(stringDrugi.length-3);
+    document.write(prvi+prvi+drugi);
+}
+
+
+/*
+Zadatak 3
+Napisati program koji formira akronim za zadatu frazu. 
+Akronim se sastoji od kapitalizovanih prvih slova reči u frazi. 
+Na primer RAM je akronim za frazu „random access memory“.
+*/
+
+function akronimi(str){
+    var words = str.split(" ");
+    var akronim = "";
+    for(var i in words){
+        akronim += words[i][0];
+    }
+    return akronim.toUpperCase();
+
+}
+
+
+//Zadatak 4 : izracunati prosek ucenika i ispisati rezultat s imenom
+
+var ocene = [8, 7, 6, 9, 8, 10, 8];
+var ime_prez = ["Marko", "Markovic"];
+
+function ispisProsekaStudenta(ocene, punoIme){
+    var prosek = 0;
+    var zbir = 0;
+    for(var i in ocene){
+        zbir += ocene[i];
+    }
+    prosek = zbir/ocene.length;
+    console.log(`Student ${punoIme} ima prosek ${prosek}.`);
+}
+
+
+
+//Zadatak 5
+/*
+Napisati funkciju koja treba da primi kao parametar niz koji sadrzi parove 
+naziva korisnika i njihovih korisnickih uloga,
+npr: "markec|admin", "godzz|webmaster", "nikola123|admin", "nennad|moderator"
+*/
+var podaci = ["markec|admin", "godzz|webmaster", "nikola123|admin", "nennad|moderator"];
+var korUloge = [];
+
+
+function pronadjiUloge(podaci){
+
+    for(var i in podaci){
+        var korisnik = podaci[i].split("|");
+        if(!korUloge.includes(korisnik[1])){
+            korUloge.push(korisnik[1]);
+        }
+    } return korUloge;
+}
+
+/*Zadatak 6
+Napisati funkciju koja prima datu strukturu:
+var korisnici = ["marko:17", "nikola:28", "pera:23", "nenad:15"];
+Funkcija treba da prodje kroz zadati niz 
+i da ispise da li je osoba punoletna ili ne.
+*/
+
+var korisnici = ["marko:17", "nikola:28", "pera:23", "nenad:15"];
+
+function proveraPunoletstva(niz){
+    for(var i in niz){
+        var podaci = niz[i].split(":");
+        if(podaci[1] >= 18){
+            console.log(podaci[0].charAt(0).toUpperCase()+podaci[0].substring(1) + 
+            " - DA");
+        } else{
+            console.log(podaci[0].charAt(0).toUpperCase()+podaci[0].substring(1) + 
+            " - NE");
+        }
+    }
+}
+
+
+
+
+
+
+
+
