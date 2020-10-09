@@ -301,3 +301,30 @@ for(var i = 0; i < zaposleni[2].length; i++){
         zaposleni[2][i] = plataDoktora;
     }
 }
+
+
+
+
+//funkcije
+
+
+var korisnici = [];
+
+function podeli(args){
+    var podaci = args.split("|");
+    korisnici.push(podaci);
+}
+
+podeli('marko|markovic');
+podeli('pera|peric');
+
+
+function ispisiKorisnike(korisnici){
+    for(var i = 0; i < korisnici.length; i++){
+        document.write("Korisnik: <br>")
+            document.write("Korisnicko ime: " + korisnici[i][0] +"<br>");
+            document.write("Lozinka je: " + korisnici[i][1] + "<br><br>");
+    }
+}
+
+ispisiKorisnike(korisnici);
