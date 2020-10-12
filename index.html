@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h2{
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
+<form action="" >
+    <select onclick="ispisi(this)">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+</select>
+<input type="text" name="placeholder" id="placeholder">
+<input type="button" value="Klikni me!" onclick="insert()">
+<h2 id="secret"></h2>
+</form>
+
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/objekti.js"></script>
 </body>
 </html>
