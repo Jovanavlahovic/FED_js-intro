@@ -10,4 +10,5 @@ function insert(){
     var tmp = document.getElementById("placeholder").value;
     document.getElementById("secret").innerHTML = tmp;
     document.getElementById('secret').style.visibility= "visible";
+    
 }
